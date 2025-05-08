@@ -1,9 +1,10 @@
 import makeKaplayCtx from "./kaplayCtx";
 import { PALETTE } from "./constants";
+import makePlayer from "./entities/Player";
 
 export default async function initGame() {
   const k = makeKaplayCtx();
-  k.loadSprite("player", "./sprites/palyer.png", {
+  k.loadSprite("player", "./sprites/player.png", {
     sliceX: 4,
     sliceY: 8,
     anims: {
@@ -47,6 +48,12 @@ export default async function initGame() {
   k.loadSprite("platformer-js", "./projects/platformer-js.png");
   k.loadShaderURL("tiledPattern", null, "./shaders/tiledPattern.frag");
 
+  if (k.width() < 1000) {
+    k.camScale(k.vec2(0.5));
+  } else {
+    k.camScale(k.vec2(0.8));
+  }
+
   const tiledBackground = k.add([
     k.uvquad(k.width(), k.height()),
     k.shader("tiledPattern", () => ({
@@ -60,4 +67,12 @@ export default async function initGame() {
     k.pos(0),
     k.fixed(),
   ]);
+
+  k.onResize(() => {
+    tiledBackground.width = k.width();
+    tiledBackground.height = k.height();
+    tiledBackground.uniform.u_aspect = k.width() / k.height();
+  });
+
+  makePlayer(k, k.vec2(k.center()), 700);
 }
