@@ -1,4 +1,10 @@
 import { DIAGONAL_FACTOR } from "../constants";
+import {
+  isEmailModalVisibleAtom,
+  isProjectModalVisibleAtom,
+  isSocialModalVisibleAtom,
+  store,
+} from "../store";
 
 export default function makePlayer(k, posVec2, speed) {
   const player = k.add([
@@ -48,6 +54,13 @@ export default function makePlayer(k, posVec2, speed) {
         k.easings.linear
       );
     }
+
+    if (
+      store.get(isSocialModalVisibleAtom) ||
+      store.get(isEmailModalVisibleAtom) ||
+      store.get(isProjectModalVisibleAtom)
+    )
+      return;
 
     player.direction = k.vec2(0, 0);
     const worldMousePos = k.toWorld(k.mousePos());
