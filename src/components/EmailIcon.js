@@ -31,4 +31,6 @@ export default function makeEmailIcon(
     store.set(isEmailModalVisibleAtom, true);
     store.set(emailAtom, email);
   });
+
+  return emailIcon;
 }
