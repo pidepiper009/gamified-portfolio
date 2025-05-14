@@ -2,6 +2,7 @@ import makeKaplayCtx from "./kaplayCtx";
 import { PALETTE } from "./constants";
 import makePlayer from "./entities/Player";
 import { cameraZoomValueAtom, store } from "./store";
+import makeSection from "./components/section";
 
 export default async function initGame() {
   const k = makeKaplayCtx();
@@ -82,6 +83,34 @@ export default async function initGame() {
     tiledBackground.height = k.height();
     tiledBackground.uniform.u_aspect = k.width() / k.height();
   });
+
+  makeSection(
+    k,
+    k.vec2(k.center().x, k.center().y - 400),
+    "About",
+    (parent) => {}
+  );
+
+  makeSection(
+    k,
+    k.vec2(k.center().x - 400, k.center().y),
+    "Skills",
+    (parent) => {}
+  );
+
+  makeSection(
+    k,
+    k.vec2(k.center().x + 400, k.center().y),
+    "Experience",
+    (parent) => {}
+  );
+
+  makeSection(
+    k,
+    k.vec2(k.center().x, k.center().y + 400),
+    "Projects",
+    (parent) => {}
+  );
 
   makePlayer(k, k.vec2(k.center()), 700);
 }
