@@ -5,6 +5,7 @@ import { cameraZoomValueAtom, store } from "./store";
 import makeSection from "./components/section";
 import makeEmailIcon from "./components/EmailIcon";
 import makeSocialIcon from "./components/SocialIcon";
+import { makeAppear } from "./utils";
 
 export default async function initGame() {
   const generalData = await (await fetch("./configs/generalData.json")).json();
@@ -138,6 +139,9 @@ export default async function initGame() {
           socialData.description
         );
       }
+
+      makeAppear(k, container);
+      makeAppear(k, socialContainer);
     }
   );
 
