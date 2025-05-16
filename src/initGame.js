@@ -7,6 +7,7 @@ import makeEmailIcon from "./components/EmailIcon";
 import makeSocialIcon from "./components/SocialIcon";
 import makeSkillIcon from "./components/SkillIcon";
 import makeWorkExperienceCard from "./components/WorkExperienceCard";
+import makeProjectCard from "./components/ProjectCard";
 import { makeAppear } from "./utils";
 
 export default async function initGame() {
@@ -15,6 +16,9 @@ export default async function initGame() {
   const skillsData = await (await fetch("./configs/skillsData.json")).json();
   const experiencesData = await (
     await fetch("./configs/experiencesData.json")
+  ).json();
+  const projectsData = await (
+    await fetch("./configs/projectsData.json")
   ).json();
 
   const k = makeKaplayCtx();
@@ -194,8 +198,22 @@ export default async function initGame() {
   makeSection(
     k,
     k.vec2(k.center().x, k.center().y + 400),
-    "Projects",
-    (parent) => {}
+    generalData.section4Name,
+    (parent) => {
+      const container = parent.add([k.opacity(0), k.pos(0, 0)]);
+
+      for (const project of projectsData) {
+        makeProjectCard(
+          k,
+          container,
+          k.vec2(project.pos.x, project.pos.y),
+          project.data,
+          project.thumbnail
+        );
+      }
+
+      makeAppear(k, container);
+    }
   );
 
   makePlayer(k, k.vec2(k.center()), 700);
