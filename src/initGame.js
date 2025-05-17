@@ -49,12 +49,12 @@ export default async function initGame() {
   k.loadSprite("github-logo", "./logos/github-logo.png");
   k.loadSprite("linkedin-logo", "./logos/linkedin-logo.png");
   k.loadSprite("youtube-logo", "./logos/youtube-logo.png");
-  k.loadSprite("x-logo", "./logos/x-logo.png");
-  k.loadSprite("substack-logo", "./logos/substack-logo.png");
+  k.loadSprite("linkedin-logo", "./logos/linkedin-logo.png");
+  k.loadSprite("discord-logo", "./logos/discord-logo.png");
   k.loadSprite("javascript-logo", "./logos/js-logo.png");
   k.loadSprite("typescript-logo", "./logos/ts-logo.png");
   k.loadSprite("react-logo", "./logos/react-logo.png");
-  k.loadSprite("nextjs-logo", "./logos/nextjs-logo.png");
+  k.loadSprite("java-logo", "./logos/java-logo.png");
   k.loadSprite("postgres-logo", "./logos/postgres-logo.png");
   k.loadSprite("html-logo", "./logos/html-logo.png");
   k.loadSprite("css-logo", "./logos/css-logo.png");
@@ -120,7 +120,7 @@ export default async function initGame() {
           size: 48,
         }),
         k.color(k.Color.fromHex(PALETTE.color1)),
-        k.pos(485, 100),
+        k.pos(325, 100),
         k.opacity(0),
       ]);
 
