@@ -3,12 +3,12 @@
       "pos": { "x": 150, "y": -100 },
       "cardHeight": 250,
       "roleData": {
-        "title": "Front-End Software Engineer",
-        "description": "Enhanced [\\REDACTED\\]'s interactive design platform by building and optimizing prototyping tools, empowering designers to create high-fidelity experiences and bridging the gap between design and development.",
+        "title": "Project Supervisor (Casual)",
+        "description": "Supported student teams in the IT projects to develop software solutions for the university research office. Guided teams through software development process, facilitating workshop every week.",
         "company": {
-          "name": "[\\REDACTED]",
-          "startDate": "2024",
-          "endDate": "Present"
+          "name": "University of Melbourne",
+          "startDate": "Jul 2024",
+          "endDate": "Dec 2024"
         }
       }
     },
@@ -16,12 +16,12 @@
       "pos": { "x": 150, "y": 180 },
       "cardHeight": 250,
       "roleData": {
-        "title": "Product Software Engineer",
-        "description": "Improved [\\REDACTED]'s real-time design collaboration tool by developing new components and refining existing features, enhancing workflow efficiency and creativity for design teams worldwide.",
+        "title": "Software Engineer Intern",
+        "description": "Implemented UI test automation for SideChef's web application using TypeScript and Playwright framework. Improved test coverage by 15% and supported supervisor in streamlining the test suite",
         "company": {
-          "name": "[\\REDACTED]",
-          "startDate": "2021",
-          "endDate": "2023"
+          "name": "SideChef",
+          "startDate": "Nov 2023",
+          "endDate": "Feb 2024"
         }
       }
     }
