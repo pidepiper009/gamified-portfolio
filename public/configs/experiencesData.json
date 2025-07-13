@@ -1,6 +1,19 @@
 [
-    {
+        {
       "pos": { "x": 150, "y": -100 },
+      "cardHeight": 250,
+      "roleData": {
+        "title": "Software Developer",
+        "description": "Collaborated in the development of MedMisti, a companion app for smart nebuliser devices.",
+        "company": {
+          "name": "Misti",
+          "startDate": "Jun 2025",
+          "endDate": "Present"
+        }
+      }
+    },
+    {
+      "pos": { "x": 150, "y": 180 },
       "cardHeight": 250,
       "roleData": {
         "title": "Project Supervisor (Casual)",
@@ -13,7 +26,7 @@
       }
     },
     {
-      "pos": { "x": 150, "y": 180 },
+      "pos": { "x": 150, "y": 460 },
       "cardHeight": 250,
       "roleData": {
         "title": "Software Engineer Intern",
